@@ -659,7 +659,7 @@ export default function App() {
     
     return (
       <div className={`mt-1 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded inline-block ${isCompatible ? 'bg-cyan-900/30 text-cyan-400 border border-cyan-800/50' : 'bg-red-900/30 text-red-400 border border-red-800/50'}`}>
-        [COMPATIBILIDADE: ${classNames}]
+        {`[COMPATIBILIDADE: ${classNames}]`}
       </div>
     );
   };
@@ -1616,7 +1616,7 @@ export default function App() {
                         <div className="flex gap-1 justify-center flex-wrap mb-1 w-[120%] -ml-[10%]">
                           {combatState.playerStatuses?.map((s, i) => (
                             <span key={i} className={`text-[8px] px-1 rounded font-bold ${s.type==='overheat'?'bg-orange-500/20 text-orange-400 border border-orange-500/50':s.type==='corrosion'?'bg-green-500/20 text-green-400 border border-green-500/50':'bg-yellow-500/20 text-yellow-400 border border-yellow-500/50'}`}>
-                              ${s.type==='overheat'?'[CALOR:':s.type==='corrosion'?'[ÁCIDO:':'[CHOQUE:'}${s.duration}t]
+                              {`${s.type==='overheat'?'[CALOR:':s.type==='corrosion'?'[ÁCIDO:':'[CHOQUE:'}${s.duration}t]`}
                             </span>
                           ))}
                         </div>
@@ -1641,7 +1641,7 @@ export default function App() {
                         <div className="flex gap-1 justify-center flex-wrap mb-1 w-[120%] -ml-[10%]">
                           {combatState.monsterStatuses?.map((s, i) => (
                             <span key={i} className={`text-[8px] px-1 rounded font-bold ${s.type==='overheat'?'bg-orange-500/20 text-orange-400 border border-orange-500/50':s.type==='corrosion'?'bg-green-500/20 text-green-400 border border-green-500/50':'bg-yellow-500/20 text-yellow-400 border border-yellow-500/50'}`}>
-                              ${s.type==='overheat'?'[CALOR:':s.type==='corrosion'?'[ÁCIDO:':'[CHOQUE:'}${s.duration}t]
+                              {`${s.type==='overheat'?'[CALOR:':s.type==='corrosion'?'[ÁCIDO:':'[CHOQUE:'}${s.duration}t]`}
                             </span>
                           ))}
                         </div>
