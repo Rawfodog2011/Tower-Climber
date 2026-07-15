@@ -102,12 +102,15 @@ function createDefaultPlayer() {
     currentClassId: 'tecno_aprendiz',
     gold: 0,
     inventory: [
-      ITEMS_DATABASE['espada_longa'], 
-      ITEMS_DATABASE['arco_caca'],    
-      ITEMS_DATABASE['anel_da_vitalidade'],
-      ITEMS_DATABASE['amuleto_do_vento'] 
+      ITEMS_DATABASE['weapon_common_classless_1'],
+      ITEMS_DATABASE['armor_common_classless_1'],
+      ITEMS_DATABASE['accessory_common_classless_1'],
+      ITEMS_DATABASE['weapon_common_tecno_aprendiz']
     ],
-    equipment: {},
+    equipment: {
+      weapon: ITEMS_DATABASE['weapon_common_classless_1'],
+      armor: ITEMS_DATABASE['armor_common_classless_1']
+    },
     highestFloorUnlocked: 1,
     learnedSkills: [],
     materials: { common: 0, rare: 0, epic: 0 },
@@ -146,15 +149,15 @@ export default function App() {
       currentClassId: 'tecno_aprendiz',
       gold: 0,
       inventory: [
-        ITEMS_DATABASE['espada_longa'], 
-        ITEMS_DATABASE['arco_caca'],    
-        ITEMS_DATABASE['anel_da_vitalidade'],
-        ITEMS_DATABASE['amuleto_do_vento'] 
+        ITEMS_DATABASE['weapon_common_classless_1'],
+        ITEMS_DATABASE['armor_common_classless_1'],
+        ITEMS_DATABASE['accessory_common_classless_1'],
+        ITEMS_DATABASE['weapon_common_tecno_aprendiz']
       ],
       learnedSkills: [],
       equipment: {
-        weapon: ITEMS_DATABASE['espada_enferrujada'],
-        armor: ITEMS_DATABASE['tunica_velha']
+        weapon: ITEMS_DATABASE['weapon_common_classless_1'],
+        armor: ITEMS_DATABASE['armor_common_classless_1']
       },
       highestFloorUnlocked: 1,
       matrixPoints: 0,
@@ -170,7 +173,9 @@ export default function App() {
         'blindagem_reativa': { level: 0, exp: 0 },
         'overclock_combate': { level: 0, exp: 0 },
         'dissipacao_calor': { level: 0, exp: 0 }
-      }
+      },
+      contracts: [],
+      bestiary: {}
     };
   });
 
