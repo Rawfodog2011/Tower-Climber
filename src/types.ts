@@ -108,6 +108,12 @@ export interface AdaptationDef {
   isFusion?: boolean;
 }
 
+export interface AutoBattleRule {
+  id: string;
+  condition: AutoBattleCondition;
+  action: AutoBattleAction;
+}
+
 export interface Player {
   saveVersion?: number;
   campaignBeaten?: boolean;

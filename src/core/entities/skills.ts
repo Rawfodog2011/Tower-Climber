@@ -179,6 +179,7 @@ export const SKILLS_DATABASE: Record<string, Skill> = {
  * corresponde à classe requerida pela habilidade.
  */
 export function canClassUseSkill(playerClassId: string, skill: Skill): boolean {
+  if (skill.allowedClassId === 'todas') return true;
   let currentClass: ClassDefinition | undefined = CLASSES[playerClassId];
 
   while (currentClass) {
